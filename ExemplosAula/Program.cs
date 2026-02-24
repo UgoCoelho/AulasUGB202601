@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 //primeira aula 10/02/2026
+// iCalyca
 
 int num1 = 20;
 int num2 = 22;
