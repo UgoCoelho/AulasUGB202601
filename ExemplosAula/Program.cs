@@ -9,15 +9,29 @@ int soma = num1 + num2;
 
 Console.WriteLine($"a soma dos numeros {num1} e {num2} é: " + soma);
 
-Console.WriteLine("informe a sua idade: ");
-var idade = int.Parse(Console.ReadLine());
-if (idade >= 18 && idade <= 80)
+
+int idade;
+bool idadeValida = false;
+while (!idadeValida)
 {
-    Console.WriteLine("Você pode tirar CNH");
-}
-else
-{
-    Console.WriteLine("você ainda não pode tirar habilitação");
+    Console.WriteLine("digite a sua idade: ");
+    try
+    {
+        idade = Convert.ToInt32(Console.ReadLine());
+        idadeValida = true;   
+        if (idade >= 18 && idade <= 80)
+        {
+            Console.WriteLine("Você pode tirar CNH");
+        }
+        else
+        {
+            Console.WriteLine("você ainda não pode tirar habilitação");
+        }
+    }
+    catch (FormatException)
+    {
+        Console.WriteLine("o valor infrmado deve ser em algarismos algébricos, NÚMEROS!");
+    }
 }
 
 
@@ -30,8 +44,11 @@ Console.WriteLine("Bem vindo! " + nome);
 
 //informe se a idade do usuario é um nomero par ou impar
 
+int idadedois;
+Console.WriteLine("digite a sua idade: ");
+idadedois = Convert.ToInt32(Console.ReadLine());
 
-if (idade % 2 == 0)
+if (idadedois % 2 == 0)
 {
     Console.WriteLine("sua idade é um numero par!");
 }
