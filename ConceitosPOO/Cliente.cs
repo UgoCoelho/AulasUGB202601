@@ -45,7 +45,7 @@ namespace ConceitosPOO
                 }
                 else
                 {
-                    Console.WriteLine("CPF inválido!");
+                    Console.WriteLine("CPF inválido! CPF deve ter 11 digitos!");
                 }
             }
         }
