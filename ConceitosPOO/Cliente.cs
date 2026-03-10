@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,16 +14,10 @@ namespace ConceitosPOO
         
         public string Nome 
         {
-            get
-            {
-                return _nome;
-            }
+            get => _nome;
             set
             {
-                if (value.Length > 0)
-                    _nome = value;
-                else
-                    throw new Exception("O nome não pode estar vazio!");
+                _nome = value;
             }
         }
 
@@ -30,24 +25,17 @@ namespace ConceitosPOO
 
         public string Cpf
         {
-            get
-            {
-                return _cpf;
-            }
+            get=> _cpf;
+           
             set
             {
-                if (value.Length == 11)
-                {
-                    string cpfFormatado = Convert.ToUInt64(value)
-                        .ToString(@"000\.000\.000\-00");
-
-                    Console.WriteLine($"CPF do cliente: {cpfFormatado}");
-                }
-                else
-                {
-                    Console.WriteLine("CPF inválido! CPF deve ter 11 digitos!");
-                }
+                _cpf = value;
             }
+        }
+        public Cliente(string nome, string cpf)
+        {
+            _nome = nome;
+            _cpf = cpf;
         }
     }
 }
