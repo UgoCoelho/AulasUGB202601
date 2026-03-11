@@ -41,3 +41,19 @@ agencia.Telefone = Console.ReadLine();
 Console.WriteLine($"Telefone da agencia: {agencia.Telefone}");
 Console.WriteLine($"Numero da agencia: {agencia.Numero}");
 
+Conta conta;
+Console.WriteLine("Digite o numero da sua conta: ");
+long numero = int.Parse( Console.ReadLine() );
+Console.WriteLine("Digite o saldo inicial da sua conta: ");
+decimal saldo = decimal.Parse( Console.ReadLine() );
+
+conta = new Conta(numero, saldo);
+Console.WriteLine($"Numero da conta: {conta.Numero}");
+Console.WriteLine($"saldo inicial da conta: {conta.Saldo}");
+
+conta.Deposito(1000);
+Console.WriteLine($"saldo apos o deposito: {conta.Saldo}");
+
+conta.Saque(500);
+Console.WriteLine($"saldo apos o saque: {conta.Saldo}");
+

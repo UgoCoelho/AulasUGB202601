@@ -33,5 +33,31 @@ namespace ConceitosPOO
             _numero = numero;
             _saldo = saldo;
         }
+
+        public void Deposito(decimal valor)
+        {
+            if (valor > 0)
+            {
+                _saldo += valor;
+            }
+            else
+            {
+                Console.WriteLine("valor invalido para deposito! favor entrar com um valor acima de R$00,00");
+            }
+        }
+
+        public void Saque(decimal valor)
+        {
+            {
+                if (valor > 0)
+                {
+                    _saldo -= valor;
+                }
+                else
+                {
+                    Console.WriteLine("valor invalido para saque! favor entrar com um valor acima de R$00,00");
+                }
+            }
+        }
     }
 }
