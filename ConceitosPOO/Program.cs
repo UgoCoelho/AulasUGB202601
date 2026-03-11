@@ -51,9 +51,12 @@ conta = new Conta(numero, saldo);
 Console.WriteLine($"Numero da conta: {conta.Numero}");
 Console.WriteLine($"saldo inicial da conta: {conta.Saldo}");
 
-conta.Deposito(1000);
+Console.WriteLine("Digite o valor que deseja depositar: ");
+decimal deposito = decimal.Parse( Console.ReadLine() );
+conta.Deposito(deposito);
 Console.WriteLine($"saldo apos o deposito: {conta.Saldo}");
-
-conta.Saque(500);
+Console.WriteLine("Digite o valor que deseja sacar");
+decimal saque = decimal.Parse(Console.ReadLine());
+conta.Saque(saque);
 Console.WriteLine($"saldo apos o saque: {conta.Saldo}");
 
