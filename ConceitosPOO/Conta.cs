@@ -38,11 +38,11 @@ namespace ConceitosPOO
         {
             if (valor > 0)
             {
-                _saldo += valor;
+                this.Saldo += valor;
             }
             else
             {
-                Console.WriteLine("valor invalido para deposito! favor entrar com um valor acima de R$00,00");
+                throw new ArgumentException("valor invalido para deposito! favor entrar com um valor acima de R$00,00");
             }
         }
 
@@ -51,11 +51,11 @@ namespace ConceitosPOO
             {
                 if (valor > 0)
                 {
-                    _saldo -= valor;
+                    this.Saldo -= valor;
                 }
                 else
                 {
-                    Console.WriteLine("valor invalido para saque! favor entrar com um valor acima de R$00,00");
+                    throw new ArgumentException("valor invalido para saque! favor entrar com um valor acima de R$00,00");
                 }
             }
         }
