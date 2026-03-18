@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.14.36915.13
+# Visual Studio Version 18
+VisualStudioVersion = 18.4.11612.150 stable
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConceitosBasicos", "ExemplosAula\ConceitosBasicos.csproj", "{2ED44CB6-528A-4178-B608-186AFFB77D64}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConceitosPOO", "ConceitosPOO\ConceitosPOO.csproj", "{D5863505-554D-4056-B0E2-5D7389D52BE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConceitosPOO", "TestConceitosPOO\TestConceitosPOO.csproj", "{EEFCFF13-9251-4ED0-822F-CDF4DB5B6438}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{D5863505-554D-4056-B0E2-5D7389D52BE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5863505-554D-4056-B0E2-5D7389D52BE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5863505-554D-4056-B0E2-5D7389D52BE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEFCFF13-9251-4ED0-822F-CDF4DB5B6438}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEFCFF13-9251-4ED0-822F-CDF4DB5B6438}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEFCFF13-9251-4ED0-822F-CDF4DB5B6438}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEFCFF13-9251-4ED0-822F-CDF4DB5B6438}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

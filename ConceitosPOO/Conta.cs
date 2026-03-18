@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConceitosPOO
 {
-    internal class Conta
+    public class Conta
     {
         private long _numero;
         public long Numero 
@@ -57,6 +57,18 @@ namespace ConceitosPOO
                 {
                     throw new ArgumentException("valor invalido para saque! favor entrar com um valor acima de R$00,00");
                 }
+            }
+        }
+        public void Transferencia( decimal valor, Conta contadois)
+        {
+            if (valor > 0)
+            {
+                this.Saldo -= valor;
+                contadois.Saldo += valor;
+            }
+            else
+            {
+                throw new ArgumentException("valor invalido para saque! favor entrar com um valor acima de R$00,00");
             }
         }
     }
