@@ -59,17 +59,18 @@ namespace ConceitosPOO
                 }
             }
         }
-        public void Transferencia( decimal valor, Conta contadois)
+        public void Transferencia( decimal valor, Conta contaDestino)
         {
             if (valor > 0)
             {
                 this.Saldo -= valor;
-                contadois.Saldo += valor;
+                contaDestino.Saldo += valor;
             }
             else
             {
-                throw new ArgumentException("valor invalido para saque! favor entrar com um valor acima de R$00,00");
+                throw new ArgumentException("valor invalido para transferencia! favor entrar com um valor acima de R$00,00");
             }
+
         }
     }
 }

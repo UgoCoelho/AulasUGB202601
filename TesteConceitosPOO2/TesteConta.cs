@@ -1,13 +1,8 @@
 ﻿using ConceitosPOO;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Net.Mime.MediaTypeNames;
 
 
-namespace TestConceitosPOO
+
+namespace TestConceitosPOO2
 {
     [TestClass]
     public class TesteConta
@@ -74,7 +69,7 @@ namespace TestConceitosPOO
             Conta conta = new Conta(111, saldoInicial);
 
             // verificação
-            Assert.ThrowsException<ArgumentOutOfRangeException>(() => conta.Sacar(valorSaque));
+            Assert.ThrowsException<ArgumentException>(() => conta.Saque(valorSaque));
         }
     }
 }
