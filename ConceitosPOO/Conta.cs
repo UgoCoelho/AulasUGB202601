@@ -8,6 +8,7 @@ namespace ConceitosPOO
 {
     public class Conta
     {
+           
         private long _numero;
         public long Numero 
         { 
@@ -28,10 +29,27 @@ namespace ConceitosPOO
             } 
         }
         
+
+        private Cliente _titular;
+        public Cliente Titular 
+        {
+            get {  return _titular; }
+            set { _titular = value; }
+        }
+
+        private Agencia _numagencia;
+        public Agencia NumAgencia
+        {
+            get { return _numagencia; }
+            set { _numagencia = value; }
+
+        }
+
         public Conta(long numero, decimal saldo)
         {
             _numero = numero;
             _saldo = saldo;
+           
         }
 
         public void Deposito(decimal valor)
